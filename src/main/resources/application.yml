@@ -1,0 +1,30 @@
+spring:
+  messages:
+    encoding: utf-8
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  application:
+    name: layui-instance
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    cache: false
+  resources:
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+server:
+  tomcat:
+    uri-encoding: utf-8
+    accesslog:
+      max-days: 1
+    max-threads: 1000
+  port: 80
+
