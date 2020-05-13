@@ -1,6 +1,6 @@
 pipeline{
+    agent none
     stages{
-        agent none
         stage('mvn-build-project'){
             agent{
                 docker{
@@ -15,12 +15,12 @@ pipeline{
                 sh 'ls -al'
             }
         }
-        stage(docker-build){
+        stage('docker-build'){
             steps{
                sh 'echo 666'
             }
         }
-        stage(release-project){
+        stage('release-project'){
             steps{
                 sh 'echo 666'
             }
