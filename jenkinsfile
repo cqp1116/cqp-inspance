@@ -10,10 +10,7 @@ pipeline{
             steps{
                 sh 'mvn -B -gs maven-setting.xml -DskipTests clean package'
                 sh 'echo 666'
-                sh ```
-                pwd
-                ls -al
-                ```
+                sh 'pwd'
             }
         }
         stage(docker-build){
